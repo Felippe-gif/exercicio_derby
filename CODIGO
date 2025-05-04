@@ -1,0 +1,36 @@
+print('\n\t\t --- DERBY --- \n')
+
+palmeiras_vitorias = 0
+corinthians_vitorias = 0
+empate = 0
+total_derby = 0
+
+while True:
+    pal = int(input('GOLS DO PALMEIRAS:'))
+    cor = int(input('GOLS DO CORINTHIANS:'))
+    total_derby += 1
+
+    if pal > cor :
+        palmeiras_vitorias += 1
+    elif pal < cor:
+        corinthians_vitorias += 1
+    else:
+        empate += 1
+    
+    print("Novo DERBY (1-sim 2-nao)")
+    opcao = int(input())
+
+    if opcao == 2:
+        break
+
+print(f'{total_derby} DERBY')
+print(f'VITORIAS DO PALMEIRAS: {palmeiras_vitorias}')
+print(f'VITORIAS DO CORINTHIANS: {corinthians_vitorias}')
+print(f'EMPATES: {empate}')
+
+if palmeiras_vitorias > corinthians_vitorias:
+    print('PALMEIRAS VENCEU MAIS')
+elif palmeiras_vitorias < corinthians_vitorias:
+    print('CORINTHIANS VENCEU MAIS ')
+else:
+    print('NAO HOUVE VECEDOR')
